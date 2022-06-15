@@ -33,6 +33,7 @@ if(!localStorage.getItem('name')) {
     setUserName();
   } 
   else if (localStorage.getItem('name') === null ) {
+    localStorage.removeItem('name');
     setUserName();
   } 
   else if (localStorage.getItem('name') === '' ) {
