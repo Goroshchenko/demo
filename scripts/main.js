@@ -25,7 +25,7 @@ function setUserName() {
     } 
        else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Испытай себя на прочность, ' + myName + '!';
+    myHeading.textContent = 'Испытай себя на прочность, ' + myName + ' !';
   }
 }
 
@@ -33,7 +33,6 @@ if(!localStorage.getItem('name')) {
     setUserName();
   } 
   else if (localStorage.getItem('name') === null ) {
-    localStorage.removeItem('name');
     setUserName();
   } 
   else if (localStorage.getItem('name') === '' ) {
@@ -41,7 +40,7 @@ if(!localStorage.getItem('name')) {
   } 
   else {
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Испытай себя на прочность, ' + storedName + '!';
+    myHeading.textContent = 'Испытай себя на прочность, ' + storedName + ' !';
   }
   myButton.onclick = function() {
     setUserName();
